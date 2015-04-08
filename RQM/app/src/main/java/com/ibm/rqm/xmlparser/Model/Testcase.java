@@ -4,16 +4,22 @@ package com.ibm.rqm.xmlparser.Model;
  * Created by Administrator on 2015/4/6 0006.
  */
 public class Testcase {
+
     private String projectAreaAlias;
     private String projectAreaHref;
+
     private String identifier;
     private String stylesheet;
     private String webId;
     private String title;
     private String description;
+
+
     private String creationDate;
     private String updated;
+    private String state;
     private String stateResource;
+    private String creator;
     private String creatorResource;
     private String owner;
     private String locked;
@@ -24,6 +30,24 @@ public class Testcase {
     private String variables;
     private String testscriptHref;
     private String templateHref;
+
+
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
 
     public String getProjectAreaAlias() {
         return projectAreaAlias;

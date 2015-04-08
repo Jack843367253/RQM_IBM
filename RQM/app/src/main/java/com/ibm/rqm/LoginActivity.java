@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,22 +17,11 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.apache.http.Header;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -53,6 +43,8 @@ public class LoginActivity extends Activity{
     private EditText mPortView;
     private View mProgressView;
     private View mLoginFormView;
+    private ImageView mAvatarView;
+    private Bitmap userAvatar;
 
     //for Login test
     private static final String HOST = "https://10.205.18.163";
@@ -70,6 +62,9 @@ public class LoginActivity extends Activity{
         mUserNameView = (EditText) findViewById(R.id.userName);
 
         mPasswordView = (EditText) findViewById(R.id.password);
+        mAvatarView = (ImageView) findViewById(R.id.avatar);
+        mAvatarView.setImageResource(R.drawable.avatar);
+
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -277,6 +272,7 @@ public class LoginActivity extends Activity{
         protected Integer doInBackground(Void... params) {
             // attempt authentication against a network service.
           //Has tested !!
+/*
             try {
                 HttpGet get = new HttpGet(ROOT_URL);
                 HttpResponse response = httpClient.execute(get);
@@ -307,11 +303,12 @@ public class LoginActivity extends Activity{
                 e.printStackTrace();
                 return FAIL_CONNECTION;
             }
+*/
 
-           /* //Only For test!
+            //Only For test!
            if(mUserName.equals("test") && mPassword.equals("test")){
                 return LOGIN_SUCCESS;
-            }*/
+            }
 
             return FAIL_CONNECTION;
         }

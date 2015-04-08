@@ -11,6 +11,8 @@ import android.util.Log;
 
 import org.apache.http.client.HttpClient;
 
+import java.util.Calendar;
+
 /**
  * Created by JACK on 2014/12/14.
  */
@@ -56,16 +58,23 @@ public class IBMApplication extends Application implements
             }
         }else if(key.equals("user_name")){
             Log.d(TAG, "userName Changed!");
-        }else if(key.equals("notifications_enable")){
-            if(sharedPreferences.getBoolean(key, false)){
-                //enable notification
-                mAManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),
-                    getRepeatTimeLength()*60*1000, generatePendingIntent());
-                Log.d(TAG, "RQM notification enabled, Frequency:" + getRepeatTimeLength());
-            }else {
-                mAManager.cancel(generatePendingIntent());
-                Log.d(TAG, "RQM notification cancled");
-            }
+        }else if(key.equals("Notification_Time")){
+            //TODO 思考这段是否有存在意义
+            String time = mPrefs.getString("notification_time","");
+            int hourOfDay = Integer.parseInt(time.substring(0,1));
+            int minute = Integer.parseInt(time.substring(3,4));
+
+            Calendar c = Calendar.getInstance();
+            c.setTimeInMillis(System.currentTimeMillis());
+            c.set(Calendar.HOUR_OF_DAY,hourOfDay);
+            c.set(Calendar.MINUTE, minute);
+            c.set(Calendar.SECOND, 0);
+            c.set(Calendar.MILLISECOND, 0);
+            mAManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+            mAManager.set(AlarmManager.RTC_WAKEUP,
+                    c.getTimeInMillis(),
+                    generatePendingIntent()
+            );
         }
 
     }

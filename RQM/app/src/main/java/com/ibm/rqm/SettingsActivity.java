@@ -1,22 +1,31 @@
 package com.ibm.rqm;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -30,8 +39,8 @@ public class SettingsActivity extends PreferenceActivity {
      * shown on tablets.
      */
     private static final boolean ALWAYS_SIMPLE_PREFS = false;
-
-
+    private Preference notificationTime;
+    private SharedPreferences timeShare;
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -53,7 +62,7 @@ public class SettingsActivity extends PreferenceActivity {
         // use the older PreferenceActivity APIs.
 
         // Add 'general' preferences.
-        addPreferencesFromResource(R.xml.pref_general);
+        addPreferencesFromResource(R.xml.pref_blank);
 
         // Add 'notifications' preferences, and a corresponding header.
         PreferenceCategory fakeHeader = new PreferenceCategory(this);
@@ -62,20 +71,71 @@ public class SettingsActivity extends PreferenceActivity {
         addPreferencesFromResource(R.xml.pref_notification);
 
         // Add 'data and sync' preferences, and a corresponding header.
-        fakeHeader = new PreferenceCategory(this);
-        fakeHeader.setTitle(R.string.pref_header_data_sync);
-        getPreferenceScreen().addPreference(fakeHeader);
         addPreferencesFromResource(R.xml.pref_data_sync);
 
         // Bind the summaries of EditText/List/Dialog/Ringtone preferences to
         // their values. When their values change, their summaries are updated
         // to reflect the new value, per the Android Design guidelines.
-        bindPreferenceSummaryToValue(findPreference("user_name"));
-        bindPreferenceSummaryToValue(findPreference("user_kind"));
+        //bindPreferenceSummaryToValue(findPreference("user_name"));
+        //bindPreferenceSummaryToValue(findPreference("user_kind"));
         bindPreferenceSummaryToValue(findPreference("notifications_new_message_ringtone"));
-        bindPreferenceSummaryToValue(findPreference("notification_frequency"));
+        bindPreferenceSummaryToValue(findPreference("notification_time"));
+
+        notificationTime = findPreference("notification_time");
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if(notificationTime == preference){
+            /*new AlertDialog.Builder(this)
+                    .setTitle("设置时间")
+                    .setMessage("设置时间").show();*/
+
+            final Calendar c = Calendar.getInstance();
+            c.setTimeInMillis(System.currentTimeMillis());
+            int hour = c.get(Calendar.HOUR_OF_DAY);
+            int minute = c.get(Calendar.MINUTE);
+
+            new TimePickerDialog(SettingsActivity.this,
+                    new TimePickerDialog.OnTimeSetListener() {
+
+                        @Override
+                        public void onTimeSet(TimePicker view,int hourOfDay,int minute){
+                            c.setTimeInMillis(System.currentTimeMillis());
+                            c.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                            c.set(Calendar.MINUTE, minute);
+                            c.set(Calendar.SECOND, 0);
+                            c.set(Calendar.MILLISECOND, 0);
+
+                            Intent intent = new Intent(SettingsActivity.this, RQMReceiver.class);
+                            PendingIntent sender= PendingIntent.getBroadcast(
+                                    SettingsActivity.this, 0, intent, 0);
+                            AlarmManager am;
+                            am = (AlarmManager)getSystemService(ALARM_SERVICE);
+                            am.set(AlarmManager.RTC_WAKEUP,
+                                    c.getTimeInMillis(),
+                                    sender
+                            );
+
+                            String time = format(hourOfDay) + ":" + format(minute);
+                            timeShare = getSharedPreferences("RQMAlarmTime", Activity.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = timeShare.edit();
+                            editor.putString("notification_time", time);
+                            editor.commit();
+
+                            Toast.makeText(SettingsActivity.this, "将在 " + time + " 获取新的进度",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }, hour, minute, true).show();
+        }
+        return true;
+    }
+
+    private String format(int x) {
+        String s=""+x;
+        if(s.length()==1) s="0"+s;
+        return s;
+    }
     /**
      * {@inheritDoc}
      */
@@ -126,8 +186,8 @@ public class SettingsActivity extends PreferenceActivity {
         public boolean onPreferenceChange(Preference preference, Object value) {
             String stringValue = value.toString();
 
-            if (preference instanceof ListPreference) {
-                // For list preferences, look up the correct display value in
+            if (preference instanceof Preference) {
+                /*// For list preferences, look up the correct display value in
                 // the preference's 'entries' list.
                 ListPreference listPreference = (ListPreference) preference;
                 int index = listPreference.findIndexOfValue(stringValue);
@@ -136,8 +196,7 @@ public class SettingsActivity extends PreferenceActivity {
                 preference.setSummary(
                         index >= 0
                                 ? listPreference.getEntries()[index]
-                                : null);
-
+                                : null);*/
             } else if (preference instanceof RingtonePreference) {
                 // For ringtone preferences, look up the correct display value
                 // using RingtoneManager.
@@ -195,6 +254,7 @@ public class SettingsActivity extends PreferenceActivity {
      * activity is showing a two-pane settings UI.
      * 普通设置，包括用户名，密码，用户类型选择
      */
+    /*
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
         @Override
@@ -210,7 +270,7 @@ public class SettingsActivity extends PreferenceActivity {
             bindPreferenceSummaryToValue(findPreference("user_kind"));
         }
     }
-
+*/
     /**
      * This fragment shows notification preferences only. It is used when the
      * activity is showing a two-pane settings UI.
@@ -247,7 +307,7 @@ public class SettingsActivity extends PreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-            bindPreferenceSummaryToValue(findPreference("notification_frequency"));
+            bindPreferenceSummaryToValue(findPreference("notification_time"));
         }
     }
 }

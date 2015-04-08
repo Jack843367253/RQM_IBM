@@ -1,11 +1,17 @@
 package com.ibm.rqm;
 
 import android.app.IntentService;
-import android.content.Context;
 import android.content.Intent;
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
+import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -119,10 +125,38 @@ public class UpdaterService extends IntentService {
     //TODO:refactor, just for test! think about the dataflow.
     //need to build the database!
     public void fetchAndUpdateProjects(){
-
+        String allProjectsUrl = "https://" + mHost + ":" + mPort + RESOURCE_PATH + "projects";
+        downloadXML(allProjectsUrl);
 
         //TODO parse the xml and update the database.
 
+    }
+
+    private String downloadXML(String urlStr){
+        String xmlStr;
+        try{
+            HttpGet get = new HttpGet(urlStr);
+            HttpResponse response = mHttpClient.execute(get);
+
+            if(response.getStatusLine().getStatusCode() == 200){
+                BufferedInputStream in = new BufferedInputStream(response.getEntity().getContent());
+                StringBuilder strBuilder = new StringBuilder();
+                byte[] buffer = new byte[1024];
+                int bytesRead = 0;
+                while((bytesRead = in.read(buffer)) != -1){
+                    String readStr = new String(buffer, 0, bytesRead);
+                    strBuilder.append(readStr);
+                }
+                xmlStr = strBuilder.toString();
+                return xmlStr;
+            }else{
+                Log.d(TAG, "Download xml failed");
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+            Log.d(TAG, "Download xml failed: " + urlStr);
+        }
+        return null;
     }
 
 

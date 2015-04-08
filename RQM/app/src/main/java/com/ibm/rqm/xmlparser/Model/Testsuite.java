@@ -13,25 +13,78 @@ public class Testsuite {
     private String description;
     private String creationDate;
     private String updated;
+    private String state;
     private String stateResource;
     private String sequentialExecution;
     private String passVariables;
     private String haltOnFailure;
     private String creator;
+    private String creatorResource;
     private String owner;
+    private String ownerResource;
     private String locked;
+    private String authorid;
     private String authoridResouce;
+    private String ownerid;
     private String owneridResource;
     private String variables;
     private String weight;
+    private String priority;
     private String priorityResource;
+    //TODO:suiteelements 考虑用列表！。
+    ///???????列表？？？？？？
+    /*
+    <ns2:suiteelements>
+<ns2:suiteelement>
+<ns2:testcase href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/Lekstuga+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:3041"/>
+<ns2:testscript href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/Lekstuga+%28Quality+Management%29/testscript/urn:com.ibm.rqm:testscript:2900"/>
+</ns2:suiteelement>
+<ns2:suiteelement>
+<ns2:testcase href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/Lekstuga+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:3040"/>
+<ns2:testscript href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/Lekstuga+%28Quality+Management%29/testscript/urn:com.ibm.rqm:testscript:2899"/>
+</ns2:suiteelement>
+<ns2:suiteelement>
+<ns2:testcase href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources/Lekstuga+%28Quality+Management%29/testcase/urn:com.ibm.rqm:testcase:3338"/>
+</ns2:suiteelement>
+</ns2:suiteelements>
+    * */
     private String suiteelements;
     private String suiteelement;
     private String testcaseHref;
     private String testscriptHref;
+
+
+    //TODO：category is a list!
+    /*
+    * <ns2:category value="SAF" term="Kravunderlag"/>
+<ns2:category value="S1" term="Testfas"/>
+<ns2:category value="FOPE" term="IT-Produkt"/>
+<ns2:category value="F?r?ldraf?rs?kring" term="LO"/>
+<ns2:category value="001" term="Kravunderlag ID"/>
+<ns2:category value="Testexekvering" term="Identifikation"/>
+    * */
     private String categoryValue;
     private String categoryTerm;
+
     private String templateHref;
+
+    //TODO custom list
+    /*
+    * <ns2:customAttributes>
+<ns2:customAttribute required="false" type="SMALL_STRING">
+<ns2:identifier>Testmilj?</ns2:identifier>
+<ns2:name>Testmilj?</ns2:name>
+<ns2:value>TM925, TM927</ns2:value>
+<ns2:description/>
+</ns2:customAttribute>
+<ns2:customAttribute required="false" type="SMALL_STRING">
+<ns2:identifier>Testplan</ns2:identifier>
+<ns2:name>Testplan</ns2:name>
+<ns2:value>Auto FP</ns2:value>
+<ns2:description/>
+</ns2:customAttribute>
+</ns2:customAttributes>
+    * */
     private String customAttributes;
     private String customAttribute;
     private String customAttributeRequired;
@@ -327,5 +380,53 @@ public class Testsuite {
 
     public void setCustomAttributeDescription(String customAttributeDescription) {
         this.customAttributeDescription = customAttributeDescription;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCreatorResource() {
+        return creatorResource;
+    }
+
+    public void setCreatorResource(String creatorResource) {
+        this.creatorResource = creatorResource;
+    }
+
+    public String getOwnerResource() {
+        return ownerResource;
+    }
+
+    public void setOwnerResource(String ownerResource) {
+        this.ownerResource = ownerResource;
+    }
+
+    public String getAuthorid() {
+        return authorid;
+    }
+
+    public void setAuthorid(String authorid) {
+        this.authorid = authorid;
+    }
+
+    public String getOwnerid() {
+        return ownerid;
+    }
+
+    public void setOwnerid(String ownerid) {
+        this.ownerid = ownerid;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
     }
 }
