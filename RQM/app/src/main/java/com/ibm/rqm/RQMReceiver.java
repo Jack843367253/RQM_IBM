@@ -39,8 +39,13 @@ public class RQMReceiver extends BroadcastReceiver {
                 .setSmallIcon(R.drawable.ic_launcher) //the icon of ntf
                 .setTicker("Check the report!")
                 .setContentTitle("IBM_RQM")
-                .setContentText("Hello for test!")
+                .setContentText("Hello for test!Hello for test!" +
+                        "Hello for test!Hello for test!Hello for test!" +
+                        "Hello for test!" +
+                        "Hello for test!Hello for test!")
                 .setContentIntent(pIntent)
+                //Big view
+                //.setStyle(new Notification.BigTextStyle())
                 .build();
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
         notification.defaults = Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE;

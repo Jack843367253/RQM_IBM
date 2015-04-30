@@ -47,7 +47,7 @@ public class LoginActivity extends Activity{
     private Bitmap userAvatar;
 
     //for Login test
-    private static final String HOST = "https://10.205.18.163";
+    private static final String HOST = "https://10.110.210.103";
     private static final int PORT = 9443;
 
     @Override
@@ -87,6 +87,7 @@ public class LoginActivity extends Activity{
             }
         });
 
+
         mPrefs = ((IBMApplication)getApplication()).getPrefs();
         if(mPrefs.getBoolean("isLogined", false)){
 
@@ -104,7 +105,8 @@ public class LoginActivity extends Activity{
             mPortView.setText(port.toString());
 
             showProgress(true);
-            //mAuthTask = new UserLoginTask(userName, password, host, port);
+
+            //UserLoginTask进行登录。
             mAuthTask = new UserLoginTask(userName, password, HOST, PORT);
             mAuthTask.execute((Void) null);
         }
@@ -272,8 +274,7 @@ public class LoginActivity extends Activity{
         protected Integer doInBackground(Void... params) {
             // attempt authentication against a network service.
           //Has tested !!
-/*
-            try {
+          /*  try {
                 HttpGet get = new HttpGet(ROOT_URL);
                 HttpResponse response = httpClient.execute(get);
                 response.getEntity().consumeContent();
@@ -305,11 +306,12 @@ public class LoginActivity extends Activity{
             }
 */
 
+
+
             //Only For test!
            if(mUserName.equals("test") && mPassword.equals("test")){
                 return LOGIN_SUCCESS;
             }
-
             return FAIL_CONNECTION;
         }
 

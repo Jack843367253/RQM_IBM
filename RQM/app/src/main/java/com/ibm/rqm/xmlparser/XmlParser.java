@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Jack on 2015/4/6 0006.
+ * 根据inputStream输入的xml解析为响应的对象数组。
  */
 public class XmlParser {
 
@@ -27,10 +28,12 @@ public class XmlParser {
         mParser = Xml.newPullParser();
     }
 
-    public void test(Context context) throws IOException{
+
+
+    public ArrayList<Project> test(Context context) throws IOException{
         InputStream is = context.getResources().getAssets().open("projects.xml");
 
-        parseProjectXML(is);
+        return parseProjectXML(is);
     }
 
     public ArrayList<Project> parseProjectXML(InputStream inputStream) {

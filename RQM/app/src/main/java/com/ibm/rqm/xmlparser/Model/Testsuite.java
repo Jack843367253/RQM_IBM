@@ -31,8 +31,8 @@ public class Testsuite {
     private String weight;
     private String priority;
     private String priorityResource;
-    //TODO:suiteelements ¿¼ÂÇÓÃÁĞ±í£¡¡£
-    ///???????ÁĞ±í£¿£¿£¿£¿£¿£¿
+    //TODO:suiteelements è€ƒè™‘ç”¨åˆ—è¡¨ï¼ã€‚
+    ///???????åˆ—è¡¨ï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿ
     /*
     <ns2:suiteelements>
 <ns2:suiteelement>
@@ -54,7 +54,7 @@ public class Testsuite {
     private String testscriptHref;
 
 
-    //TODO£ºcategory is a list!
+    //TODOï¼šcategory is a list!
     /*
     * <ns2:category value="SAF" term="Kravunderlag"/>
 <ns2:category value="S1" term="Testfas"/>

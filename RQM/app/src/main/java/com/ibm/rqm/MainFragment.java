@@ -1,35 +1,32 @@
 package com.ibm.rqm;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Fragment;
-import android.content.DialogInterface;
-import android.graphics.Bitmap;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-
-import java.io.BufferedInputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**
@@ -45,16 +42,6 @@ public class MainFragment extends Fragment {
     private static final String TAG = "MainFragment";
     private static final String ARG_SECTION_NUM = "section_num";
 
-    private static final String HOST = "https://10.205.18.163";
-    private static final String PORT = "9443";
-    private static final String ROOT_URL = HOST + ":" + PORT + "/qm";
-    private static final String LOGIN_URL = ROOT_URL + "/authenticated/j_security_check";
-    private static final String ADMIN_URL = ROOT_URL + "/admin";
-    private static final String RESOURCE_PATH = "/qm/service/com.ibm.rqm.integration.service.IIntegrationService/resources";
-
-
-    //是否已经登陆标志
-    static boolean isLogined = true;
 
     private int sectionNum;
 
@@ -62,9 +49,40 @@ public class MainFragment extends Fragment {
 
     private MainActivity myActivity;
 
-     //测试网络连接。
-    HttpClient httpClient;
-    static  Bitmap bitmap;
+    private Button pieBtn = null;
+    private Button barBtn = null;
+
+
+
+    public void draw(String[] titles,ArrayList<double[]> values)
+    {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -74,6 +92,9 @@ public class MainFragment extends Fragment {
      *
      * @return A new instance of fragment MainFragment.
      */
+
+
+
     public static MainFragment newInstance(int sectionNum) {
         MainFragment fragment = new MainFragment();
         Bundle args = new Bundle();
@@ -86,6 +107,7 @@ public class MainFragment extends Fragment {
         // Required empty public constructor
     }
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,138 +115,75 @@ public class MainFragment extends Fragment {
             sectionNum = getArguments().getInt(ARG_SECTION_NUM);
         }
 
+
+        String[] a={"amazing","good"};
+        double[] b={123,345,456,123};
+        double[] data={20, 30, 40 };
+
+
+        BarChartBuilder BarChart=new BarChartBuilder();
+        PieChartBuilder PieChart=new PieChartBuilder();
+
+        BarChart.put2bar(a, b);
+        PieChart.put2pie(data);
+
+
+
     }
+
+    private final class PieBtn implements OnClickListener {
+        @Override
+        public void onClick(View arg0) {
+
+            Intent intent = new Intent();
+            intent.setClass(myActivity, PieChartBuilder.class);
+            startActivity(intent);
+//            MainActivity.this.finish();
+        }
+
+    }
+
+    private final class BarBtn implements OnClickListener {
+        @Override
+        public void onClick(View arg0) {
+
+            Intent intent = new Intent();
+            intent.setClass(myActivity, BarChartBuilder.class);
+            startActivity(intent);
+//            MainActivity.this.finish();
+        }
+
+    }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        Button btnDownload = (Button)rootView.findViewById(R.id.btnDownload);
-        btnDownload.setOnClickListener(new onDownloadBtnClickedListener());
-
-        Button btnLogin = (Button)rootView.findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new onLoginBtnClickedListener());
-
-        EditText editText = (EditText)rootView.findViewById(R.id.resourceName);
-     //   editText.getText().toString();
+        pieBtn = (Button) rootView.findViewById(R.id.pieBtn);
+        pieBtn.setOnClickListener(new PieBtn());
+        barBtn = (Button) rootView.findViewById(R.id.barBtn);
+        barBtn.setOnClickListener(new BarBtn());
         return rootView;
     }
 
 
 
 
-    class onDownloadBtnClickedListener implements View.OnClickListener{
-
-
-        String resourceStr;
-        String xmlStr;
-        String host;
-        String projectStr;
-
-        @Override
-        public void onClick(View v) {
-            if(!isLogined){
-                new AlertDialog.Builder(myActivity).setMessage("Please Login first!")
-                        .setTitle("Alert!").setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        }).create().show();
-                return;
-            }
-
-            View rootView = myActivity.findViewById(R.id.fragment_main);
-            EditText editText = (EditText)rootView.findViewById(R.id.resourceName);
-            resourceStr = editText.getText().toString();
-            EditText editText1 = (EditText)rootView.findViewById(R.id.host);
-            host = editText1.getText().toString();
-            EditText editText2 = (EditText)rootView.findViewById(R.id.projectName);
-            projectStr = editText2.getText().toString();
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        //Build the resource URL
-                        projectStr = "JKE+Banking";
-                        resourceStr = "testplan";
-
-                        String urlStr = HOST + ":" + PORT + RESOURCE_PATH  + "/" + resourceStr;
-
-                        HttpGet get = new HttpGet(urlStr);
-                        HttpResponse response = httpClient.execute(get);
-
-                        if(response.getStatusLine().getStatusCode() == 200){
-                            BufferedInputStream in = new BufferedInputStream(response.getEntity().getContent());
-                            StringBuilder strBuilder = new StringBuilder();
-                            byte[] buffer = new byte[1024];
-                            int bytesRead = 0;
-                            while((bytesRead = in.read(buffer)) != -1){
-                                String readStr = new String(buffer, 0, bytesRead);
-                                strBuilder.append(readStr);
-                            }
-                            xmlStr = strBuilder.toString();
-                        }else{
-                            Log.d(TAG, "Download xml failed");
-                        }
-
-
-
-                    }catch (Exception e){
-                        e.printStackTrace();
-                        Log.d(TAG, "Connect fail!");
-                    }
-
-
-                }
-            }).start();
-
-            TextView xmlText = (TextView)myActivity.findViewById(R.id.fragment_main).findViewById(R.id.xmlText);
-            xmlText.setText(xmlStr);
-        }
-
-    }
-
-    private static HttpPost postForm(String url, Map<String, String> params) {
-
-        HttpPost httpost = new HttpPost(url);
-        List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-
-        Set<String> keySet = params.keySet();
-        for (String key : keySet) {
-            nvps.add(new BasicNameValuePair(key, params.get(key)));
-        }
-
-        try {
-            httpost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-
-        return httpost;
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-          //还没用到listener, 且MainActivity还没实现这个接口。
-          //  mListener = (OnFragmentInteractionListener) activity;
+            //还没用到listener, 且MainActivity还没实现这个接口。
+            //  mListener = (OnFragmentInteractionListener) activity;
 
             //在attach主界面的时候，告诉主界面设置相应的标题。
 
-          myActivity = ((MainActivity) activity);
-          myActivity.onSectionAttached(
-                  getArguments().getInt(ARG_SECTION_NUM));
-
-          httpClient = ((IBMApplication)myActivity.getApplication()).getHttpClient();
+            myActivity = ((MainActivity) activity);
+            myActivity.onSectionAttached(
+                    getArguments().getInt(ARG_SECTION_NUM));
 
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
@@ -253,42 +212,4 @@ public class MainFragment extends Fragment {
         public void onFragmentInteraction(Uri uri);
     }
 
-
-    private class onLoginBtnClickedListener implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        HttpGet get = new HttpGet(ROOT_URL);
-                        HttpResponse response = httpClient.execute(get);
-                        response.getEntity().consumeContent();
-
-
-                        HttpPost post = new HttpPost(LOGIN_URL);
-                        List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-                        nvps.add(new BasicNameValuePair("j_username", "jack"));
-                        nvps.add(new BasicNameValuePair("j_password", "wangjie123"));
-                        post.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
-                        HttpResponse loginRes = httpClient.execute(post);
-
-                        Log.d(TAG, "Login Response code:" + loginRes.getStatusLine().getStatusCode());
-
-                        get = new HttpGet(ADMIN_URL);
-                        response = httpClient.execute(get);
-
-                        if(loginRes.getStatusLine().getStatusCode() == 200){
-                            isLogined = true;
-                            Log.d(TAG, "Login Success!");
-                        }
-
-                    } catch (Exception e) {
-                        Log.d(TAG, "Login failed!");
-                    }
-                }
-
-            }).start();
-        }
-    }
 }

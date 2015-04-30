@@ -9,6 +9,13 @@ public class Project {
     private String description;
     private String alias;
 
+    @Override
+    public String toString() {
+        return "Title: " + title;
+    }
+
+    public Project(){}
+
     public String getIdentifier() {
         return identifier;
     }

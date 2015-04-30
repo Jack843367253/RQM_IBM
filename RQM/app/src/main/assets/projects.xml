@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title type="text">projects ATOM feed for all project areas</title>
+	<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects
+	</id>
+	<link href="http://jts.sfa.se/qm/web/console/" rel="alternate" />
+	<link rel="self"
+		href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects" />
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Agil-testproj(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Agil-testproj(Quality Management)</title>
+		<summary type="text">Alias: Agil-testproj%28Quality+Management%29
+		</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Agil-testproj(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Agil-testproj%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Agil-testproj(Quality
+					Management)</ns3:identifier>
+				<ns3:title>Agil-testproj(Quality Management)</ns3:title>
+				<ns3:description>Alias: Agil-testproj%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">Agil-testproj%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Test1
+		</id>
+		<updated />
+		<title type="text">FK1 (QM)</title>
+		<summary type="text">Alias: Test1</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Test1"
+			rel="alternate" type="application/xml" title="" />
+		<link href="http://jts.sfa.se/qm/web/console/FK1+%28QM%29" rel="enclosure"
+			type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Test1
+				</ns3:identifier>
+				<ns3:title>FK1 (QM)</ns3:title>
+				<ns3:description>Alias: Test1</ns3:description>
+				<ns2:alias type="string">Test1</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/F&#246;rm&#229;nsinformation-Sjukf&#246;rm&#229;ner++(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">F&#246;rm&#229;nsinformation-Sjukf&#246;rm&#229;ner
+			(Quality Management)</title>
+		<summary type="text">Alias:
+			F%C3%B6rm%C3%A5nsinformation-Sjukf%C3%B6rm%C3%A5ner++%28Quality+Management%29
+		</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/F&#246;rm&#229;nsinformation-Sjukf&#246;rm&#229;ner++(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/F%C3%B6rm%C3%A5nsinformation-Sjukf%C3%B6rm%C3%A5ner++%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Förmånsinformation-Sjukförmåner
+					(Quality Management)</ns3:identifier>
+				<ns3:title>Förmånsinformation-Sjukförmåner (Quality Management)
+				</ns3:title>
+				<ns3:description>Alias:
+					F%C3%B6rm%C3%A5nsinformation-Sjukf%C3%B6rm%C3%A5ner++%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">F%C3%B6rm%C3%A5nsinformation-Sjukf%C3%B6rm%C3%A5ner++%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Handl&#228;ggning+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Handl&#228;ggning (Quality Management)</title>
+		<summary type="text">Alias:
+			Handl%C3%A4ggning+%28Quality+Management%29</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Handl&#228;ggning+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Handl%C3%A4ggning+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Handläggning
+					(Quality Management)</ns3:identifier>
+				<ns3:title>Handläggning (Quality Management)</ns3:title>
+				<ns3:description>Alias: Handl%C3%A4ggning+%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">Handl%C3%A4ggning+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/JKE+Banking+4.0.3+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">JKE Banking 4.0.3 (Quality Management)</title>
+		<summary type="text">Alias:
+			JKE+Banking+4.0.3+%28Quality+Management%29</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/JKE+Banking+4.0.3+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/JKE+Banking+4.0.3+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/JKE
+					Banking 4.0.3 (Quality Management)</ns3:identifier>
+				<ns3:title>JKE Banking 4.0.3 (Quality Management)</ns3:title>
+				<ns3:description>Alias: JKE+Banking+4.0.3+%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">JKE+Banking+4.0.3+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/JKE+Banking+4.0.3+fix+test+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">JKE Banking 4.0.3 fix test (Quality Management)
+		</title>
+		<summary type="text">Alias:
+			JKE+Banking+4.0.3+fix+test+%28Quality+Management%29</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/JKE+Banking+4.0.3+fix+test+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/JKE+Banking+4.0.3+fix+test+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/JKE
+					Banking 4.0.3 fix test (Quality Management)</ns3:identifier>
+				<ns3:title>JKE Banking 4.0.3 fix test (Quality Management)
+				</ns3:title>
+				<ns3:description>Alias:
+					JKE+Banking+4.0.3+fix+test+%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">JKE+Banking+4.0.3+fix+test+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Ledning+och+Info(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Ledning och Info(Quality Management)</title>
+		<summary type="text">Alias: Ledning+och+Info%28Quality+Management%29
+		</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Ledning+och+Info(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Ledning+och+Info%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Ledning
+					och Info(Quality Management)</ns3:identifier>
+				<ns3:title>Ledning och Info(Quality Management)</ns3:title>
+				<ns3:description>Alias: Ledning+och+Info%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">Ledning+och+Info%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Lekstuga+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Lekstuga (Quality Management)</title>
+		<summary type="text">Alias: Lekstuga+%28Quality+Management%29
+		</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Lekstuga+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Lekstuga+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Lekstuga
+					(Quality Management)</ns3:identifier>
+				<ns3:title>Lekstuga (Quality Management)</ns3:title>
+				<ns3:description>Alias: Lekstuga+%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">Lekstuga+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Pension+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Pension (Quality Management)</title>
+		<summary type="text">Alias: Pension+%28Quality+Management%29
+		</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Pension+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Pension+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Pension
+					(Quality Management)</ns3:identifier>
+				<ns3:title>Pension (Quality Management)</ns3:title>
+				<ns3:description>Alias: Pension+%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">Pension+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/S2(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">S2(Quality Management)</title>
+		<summary type="text">Alias: S2%28Quality+Management%29</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/S2(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link href="http://jts.sfa.se/qm/web/console/S2%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/S2(Quality
+					Management)</ns3:identifier>
+				<ns3:title>S2(Quality Management)</ns3:title>
+				<ns3:description>Alias: S2%28Quality+Management%29</ns3:description>
+				<ns2:alias type="string">S2%28Quality+Management%29</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Sj&#228;lvbetj&#228;ning+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Sj&#228;lvbetj&#228;ning (Quality Management)
+		</title>
+		<summary type="text">Alias:
+			Sj%C3%A4lvbetj%C3%A4ning+%28Quality+Management%29</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Sj&#228;lvbetj&#228;ning+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Sj%C3%A4lvbetj%C3%A4ning+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Självbetjäning
+					(Quality Management)</ns3:identifier>
+				<ns3:title>Självbetjäning (Quality Management)</ns3:title>
+				<ns3:description>Alias:
+					Sj%C3%A4lvbetj%C3%A4ning+%28Quality+Management%29</ns3:description>
+				<ns2:alias type="string">Sj%C3%A4lvbetj%C3%A4ning+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Tandv&#229;rdsst&#246;d+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Tandv&#229;rdsst&#246;d (Quality Management)</title>
+		<summary type="text">Alias:
+			Tandv%C3%A5rdsst%C3%B6d+%28Quality+Management%29</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Tandv&#229;rdsst&#246;d+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Tandv%C3%A5rdsst%C3%B6d+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Tandvårdsstöd
+					(Quality Management)</ns3:identifier>
+				<ns3:title>Tandvårdsstöd (Quality Management)</ns3:title>
+				<ns3:description>Alias:
+					Tandv%C3%A5rdsst%C3%B6d+%28Quality+Management%29</ns3:description>
+				<ns2:alias type="string">Tandv%C3%A5rdsst%C3%B6d+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<id>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Utbetalning+(Quality+Management)
+		</id>
+		<updated />
+		<title type="text">Utbetalning (Quality Management)</title>
+		<summary type="text">Alias: Utbetalning+%28Quality+Management%29
+		</summary>
+		<link
+			href="http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Utbetalning+(Quality+Management)"
+			rel="alternate" type="application/xml" title="" />
+		<link
+			href="http://jts.sfa.se/qm/web/console/Utbetalning+%28Quality+Management%29"
+			rel="enclosure" type="text/html" title="Web Console" />
+		<content type="application/xml">
+			<ns2:project xmlns:ns2="http://jazz.net/xmlns/alm/qm/v0.1/"
+				xmlns:ns1="http://schema.ibm.com/vega/2008/" xmlns:ns3="http://purl.org/dc/elements/1.1/"
+				xmlns:ns4="http://jazz.net/xmlns/prod/jazz/process/0.6/" xmlns:ns5="http://jazz.net/xmlns/alm/v0.1/"
+				xmlns:ns6="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns7="http://purl.org/dc/terms/"
+				xmlns:ns8="http://jazz.net/xmlns/alm/qm/v0.1/tsl/v0.1/" xmlns:ns9="http://jazz.net/xmlns/alm/qm/v0.1/testscript/v0.1/"
+				xmlns:ns10="http://jazz.net/xmlns/alm/qm/qmadapter/task/v0.1"
+				xmlns:ns11="http://jazz.net/xmlns/alm/qm/qmadapter/v0.1"
+				xmlns:ns12="http://jazz.net/xmlns/alm/qm/v0.1/executionworkitem/v0.1"
+				xmlns:ns13="http://jazz.net/xmlns/alm/qm/v0.1/executionresult/v0.1"
+				xmlns:ns14="http://jazz.net/xmlns/alm/qm/v0.1/catalog/v0.1"
+				xmlns:ns16="http://jazz.net/xmlns/alm/qm/styleinfo/v0.1/"
+				xmlns:ns17="http://www.w3.org/1999/XSL/Transform">
+				<ns3:identifier>http://jts.sfa.se/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects/Utbetalning
+					(Quality Management)</ns3:identifier>
+				<ns3:title>Utbetalning (Quality Management)</ns3:title>
+				<ns3:description>Alias: Utbetalning+%28Quality+Management%29
+				</ns3:description>
+				<ns2:alias type="string">Utbetalning+%28Quality+Management%29
+				</ns2:alias>
+				<ns2:settingsids>
+					<ns2:settingid>com.ibm.rqm.customattribute</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testscript</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.category</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.reporting</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.artifactstatetransitionconstraints
+					</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.executionpreference</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.requirememtrisk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.buildintegration</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.manualscriptdictionary</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.sharedresourcelocation</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.execution</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningobjective</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.rqmrelatedlinks</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.risk</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.testcasesystem</ns2:settingid>
+					<ns2:settingid>com.ibm.rqm.planningpreference</ns2:settingid>
+				</ns2:settingsids>
+			</ns2:project>
+		</content>
+	</entry>
+</feed>

@@ -2,6 +2,7 @@ package com.ibm.rqm;
 
 import android.content.SharedPreferences;
 
+import com.ibm.rqm.Database.ProjectDB;
 import com.ibm.rqm.xmlparser.XmlFetcher;
 import com.ibm.rqm.xmlparser.XmlParser;
 
@@ -18,6 +19,8 @@ public class AutoUpdater {
     private IBMApplication mApp;
     private SharedPreferences mPrefs;
 
+    
+    private ProjectDB projectDB = null;
     private String mCurProjectAlias;
     XmlFetcher mFetcher;
     XmlParser mParser;
@@ -31,9 +34,12 @@ public class AutoUpdater {
         mCurProjectAlias = mPrefs.getString("currentProjectAlias", null);
         mFetcher = new XmlFetcher(mApp.getHttpClient(), host, port);
         mParser = new XmlParser();
+
     }
 
+
     public void startUpdate(){
+        openDb();
         for(int i = 0; i < RQMConstant.SIZE; ++i){
             String xmlStr = "";
             if(i == RQMConstant.PROJECTS){
@@ -49,7 +55,7 @@ public class AutoUpdater {
             switch (i){
                 case RQMConstant.PROJECTS:
                     //return the ArrayList
-                    mParser.parseProjectXML(is); break;
+                    projectDB.insertProject(mParser.parseProjectXML(is)); break;
                 case RQMConstant.TEST_CASE:
                     mParser.parseTestcaseXML(is); break;
                 case RQMConstant.TEST_PLAN:
@@ -58,12 +64,23 @@ public class AutoUpdater {
                     mParser.parseTestsuiteXML(is); break;
 
             }
-
-
         }
+
+        closeDb();
+    }
+
+    private void openDb(){
+        if(projectDB == null)
+            projectDB = new ProjectDB(mApp.getBaseContext());
+        projectDB.open();
     }
 
 
+    private void closeDb(){
+        if(projectDB != null){
+            projectDB.close();
+        }
+    }
 
 }
 

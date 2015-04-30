@@ -1,14 +1,18 @@
 package com.ibm.rqm;
 
 import android.app.Activity;
-import android.os.Bundle;
 import android.app.ListFragment;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-
+import com.ibm.rqm.Database.ProjectDB;
 import com.ibm.rqm.dummy.DummyContent;
+import com.ibm.rqm.xmlparser.Model.Project;
+
+import java.util.ArrayList;
 
 /**
  * A fragment representing a list of Items.
@@ -57,10 +61,37 @@ public class ProjectListFragment extends ListFragment {
         }
 
         // TODO: Change Adapter to display your content
-        setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS));
+       /* setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
+                android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS));*/
+
+
+        ProjectDB projectDB = new ProjectDB(getActivity().getBaseContext());
+        projectDB.open();
+        ArrayList<Project> lt = new ArrayList<Project>();
+        Project p = new Project();
+        p.setAlias("afsdf");
+        p.setTitle("sdfasdf");
+        p.setDescription("asdfa");
+        p.setIdentifier("adsf23ew");
+        lt.add(p);
+        projectDB.insertProject(lt);
+
+
+        for(Project project : projectDB.fetchAll()){
+            Log.d("nihao", "Title:" + project.getTitle());
+        }
+        ArrayAdapter<Project> adapter = new ArrayAdapter<Project>(getActivity(),
+                android.R.layout.simple_list_item_1, android.R.id.text1, projectDB.fetchAll());
+
     }
 
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setListShown(true);
+        setEmptyText("There are no projects!");
+    }
 
     @Override
     public void onAttach(Activity activity) {

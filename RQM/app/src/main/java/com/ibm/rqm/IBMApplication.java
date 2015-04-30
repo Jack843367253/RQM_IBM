@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.ibm.rqm.Database.CommDB;
+
 import org.apache.http.client.HttpClient;
 
 import java.util.Calendar;
@@ -28,6 +30,8 @@ public class IBMApplication extends Application implements
 
     private boolean isLogined;
     private boolean isNotifyOpen;
+    private CommDB mCommDBHelper = null;
+
 
     public SharedPreferences getPrefs() {
         return mPrefs;
@@ -43,7 +47,8 @@ public class IBMApplication extends Application implements
 
         mAManager = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
         isLogined = mPrefs.getBoolean("isLogined", false);
-
+        mCommDBHelper = new CommDB(this);
+        mCommDBHelper.open();
     }
 
     @Override
@@ -59,7 +64,7 @@ public class IBMApplication extends Application implements
         }else if(key.equals("user_name")){
             Log.d(TAG, "userName Changed!");
         }else if(key.equals("Notification_Time")){
-            //TODO 思考这段是否有存在意义
+            //TODO 鎬濊�杩欐鏄惁鏈夊瓨鍦ㄦ剰涔�
             String time = mPrefs.getString("notification_time","");
             int hourOfDay = Integer.parseInt(time.substring(0,1));
             int minute = Integer.parseInt(time.substring(3,4));
@@ -91,6 +96,9 @@ public class IBMApplication extends Application implements
     }
 
 
+    public CommDB getmCommDBHelper() {
+        return mCommDBHelper;
+    }
 
     private int getRepeatTimeLength(){
         return Integer.parseInt(mPrefs.getString("notification_frequency", "0"));
@@ -107,5 +115,13 @@ public class IBMApplication extends Application implements
 
     public synchronized HttpClient getHttpClient() {
         return  httpClientHelper.getHttpClient();
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        if(mCommDBHelper != null){
+            mCommDBHelper.close();
+        }
     }
 }

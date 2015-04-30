@@ -21,6 +21,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
     //    compile 'com.github.nicolasjafelle:PagingListView:0b52bfbf2e'
     compile 'com.android.support:appcompat-v7:21.0.3'
+//    compile 'com.mcxiaoke.volley:library:1.+'
+    compile files('libs/achartengine-1.1.0.jar')
 }
